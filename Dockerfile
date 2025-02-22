@@ -40,8 +40,7 @@ RUN set -eux && \
 
 COPY . .
 
-RUN yarn next telemetry disable && \ 
-    yarn prisma generate && \
+RUN yarn prisma generate && \
     yarn build
 
 HEALTHCHECK --interval=30s \
